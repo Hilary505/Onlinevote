@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About Us {% endblock %}
+{% block content %}
+    {% include 'poll/Navigation.html' %}
+<div class="section">
+  <h1>About Us Page</h1>
+  <p> We are  a company that deal with online voting.</p>
+  <p>Incase of any queries reach  us through our mails or feel free to contact us through our team who are always there to help</p>
+</div>
+
+<h2 >Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'images/judy.jpg' %}" alt="Judy" >
+      <div class="container">
+        <h2>Judy Toe</h2>
+        <p class="title">CEO & Founder</p>
+        <p>My name is Judy Toe, iam 45yrs old .Iam the CEO & Founder of the company.You are can reach me anytime</p>
+        <p> email : judy@gmail.com</p>
+          <p>Phone : +254710234534</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'images/james.jpg' %}" alt="James">
+      <div class="container">
+        <h2>James Ross</h2>
+        <p class="title">Art Director</p>
+        <p>My name is James Ross, iam 25yrs old .Iam the Art Director of the company.</p>
+        <p>email: james@gmail.com</p>
+          <p>phone: +25345678934</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'images/karo.jpg' %}" alt="Karo">
+      <div class="container">
+        <h2>Karo Oak</h2>
+        <p class="title">Designer</p>
+        <p>My name is Karo Oak, iam 35yrs old .Iam the Designer of this company.You  can reach me anytime, iam always there to assist</p>
+        <p>email:karo@gmail.com</p>
+          <p>phone:+24734567833</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+    <style>
+
+ body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+ h2{
+     margin-left: 50%;
+ }
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+.section {
+  padding: 50px;
+  text-align: center;
+  background-color: purple;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: blue;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+    </style>
+
+{% endblock %}

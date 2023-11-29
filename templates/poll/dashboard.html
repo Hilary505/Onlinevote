@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+    {% include 'poll/Navigation.html' %}
+<br>
+<h1 class="text-center">Welcome to Online Voting Platform</h1>
+<h2 class="text-center">Hi, {{request.user.get_full_name }}</h2>
+<section class="hero-section">
+ <div class="card-grid">
+   <a class="card  d-flex" href="{% url 'position' %} ">
+     <div class="card__background" style="background-image: url(https://img.freepik.com/free-vector/realistic-vector-icon-ballot-box-made-glass-hand-putting-voting-paper-inside-election-conce_134830-1493.jpg?w=2000)"></div>
+     <div class="card__content">
+       <p class="card__category">Vote</p>
+       <h3 class="card__heading"> Vote  now</h3>
+     </div>
+   </a>
+   <a class="card" href="{% url 'result' %}">
+     <div class="card__background" style="background-image: url(https://media.istockphoto.com/id/1281075008/vector/success.jpg?s=612x612&w=0&k=20&c=79U0bXwmDlMwkBQ_qyzGItiRtItpXIQJsSKc2UlvQkk=)"></div>
+     <div class="card__content">
+       <p class="card__category">Result</p>
+       <h3 class="card__heading"> See Result</h3>
+     </div>
+   </a>
+ </div>
+</section>
+    <style>
+    body{
+        background-color: bisque;
+    }
+    </style>
+{% endblock %}
